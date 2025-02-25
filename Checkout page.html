@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Infinicards.css">
+    <head>
+        <title>
+          Infinicards
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment</title>
+        <script defer src="bahsket.js"></script>
+    </head>
+<body>
+    <nav class = "navbar">
+    <div class="logo">
+      <img src="Infinicards Logo.png" alt="Logo" />
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li ><a class="nav-item" href="Home Dropshipping.html" >Home</a></li>
+      <li><a href="#" class="nav-item">About</a></li>
+      <li><a href="Contact Us.html" class="nav-item">Contact</a></li>
+      <li><a href="bahsket.html" class="nav-item">Basket</a></li>
+    </ul>
+  </nav>
+    </nav>
+    <h1 class = "center aya">Payment Page</h1>
+    <h1 class = "center">Your Basket</h1>
+    <table class = "center">
+        <thead>
+            <tr>
+                <th class="dreammask">Product⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</th>
+                <th class="dreammask">Price⠀</th>
+                <th class="dreammask">Quantity⠀</th>
+                <th class="dreammask">Total⠀</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="center">
+        <tbody id="cart-items"></tbody>
+    </table>
+    
+    <h2 class = "center">Total Price: £<span id="total-price">0.00</span></h2>
+
+    <h3 class = "center">Total: $<span id="total-price">0</span></h3>
+
+    <h2 class = "center">Enter Payment Details</h2>
+    <label class = "center">Card Number:</label>
+    <input class = "bee" type="text" id="credit-card" name="credit-card" maxlength="16" oninput="validateCreditCardInput(event)" placeholder="1234567890123456" />
+    <br><br>
+    <label class = "center" >Expiration Date:</label>
+    <input class = "bee" maxlength="5" type="text" class = "center" placeholder="MM/YY">
+    <br><br>
+    <label class = "center">CVV:</label>
+    <input class = "bee" type="text" id="credit-card" name="credit-card" maxlength="3" oninput="validateCreditCardInput(event)" placeholder="123" />
+    <br><br>
+    
+    <a class="center" onclick="completePurchase()">
+        <button type="button">Complete Purchase</button>
+    </a>
+
+</body>
+</html>
+
+<script>
+    function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartTable = document.getElementById("cart-items");
+        let totalPrice = 0;
+        cartTable.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            let row = cartTable.insertRow();
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>£${item.price.toFixed(2)}</td>
+                <td>${item.quantity}</td>
+                <td>£${(item.price * item.quantity).toFixed(2)}</td>
+            `;
+            totalPrice += item.price * item.quantity;
+        });
+
+        document.getElementById("total-price").innerText = totalPrice.toFixed(2);
+    }
+
+
+    function clearCart() {
+        localStorage.removeItem("cart");
+        loadCart();
+    }
+
+    window.onload = loadCart;
+</script>
+<script src="bahsket.js"></script>
