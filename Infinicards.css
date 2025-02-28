@@ -268,7 +268,7 @@ button:hover {
 }
 
 .awaggas {
-  font-size: 50px;
+  font-size: 25px;
 }
 
 .aya {
@@ -278,13 +278,4 @@ button:hover {
 button {
   display: block;
   margin: auto;
-}
-
-/* about us page*/
-.ustitle{
-  font-size: 50px;
-}
-
-.uswords{
-  font-size: 25px;
 }
