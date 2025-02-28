@@ -62,8 +62,58 @@
     </script>
     </ul>
 
-    <script src="search.js"></script>
-      displayAllProducts()
+<div class="search-container">
+    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for products...">
+  </div>
+
+      <div class="container" id="productContainer">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/280x180" alt="Product 1">
+      <div class="product-name">Product 1</div>
+      <div class="product-price">$25.00</div>
+      <button onclick="addToCart('Prismatic Evolution Booster Bundle', 74.99)">Basket</button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/280x180" alt="Product 2">
+      <div class="product-name">Product 2</div>
+      <div class="product-price">$30.00</div>
+      <button onclick="addToCart('Prismatic Evolution Booster Bundle', 74.99)">Basket</button>
+    </div>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="https://www.doublesleeved.co.uk/cdn/shop/files/Pokemon-TCG-Prismatic-Evolutions-Booster-Bundle_3360efe3-d4d8-42eb-b52d-8bb789c9fe10.webp?v=1730479213" alt="Product 3">
+      <div class="product-name">Product 3</div>
+      <div class="product-price">$40.00</div>
+      <button onclick="addToCart('Prismatic Evolution Booster Bundle', 74.99)">Basket</button>
+    </div>
+    <div class="product">
+      <img src="https://www.doublesleeved.co.uk/cdn/shop/files/Pokemon-TCG-Prismatic-Evolutions-Booster-Bundle_3360efe3-d4d8-42eb-b52d-8bb789c9fe10.webp?v=1730479213" alt="Product 3">
+      <div class="product-name">Product 4</div>
+      <div class="product-price">$40.00</div>
+      <button onclick="addToCart('Prismatic Evolution Booster Bundle', 74.99)">Basket</button>
+    </div>
+    <div class="product">
+    <!-- Add more products here -->
+  </div>
+
+  <script>
+    function filterProducts() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.getElementsByClassName('product');
+      
+      for (let i = 0; i < products.length; i++) {
+        const productName = products[i].getElementsByClassName('product-name')[0].textContent.toLowerCase();
+        
+        if (productName.includes(searchInput)) {
+          products[i].style.display = '';
+        } else {
+          products[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
       
     <table class="center">
       <tr class="burrito">
