@@ -84,7 +84,7 @@ function loadPayment() {
 function completePurchase() {
     alert("Payment Successful! Thank you for your purchase.");
     localStorage.removeItem("cart"); // Clear cart after purchase
-    window.location.href = "Home Dropshipping.html"; // Redirect to home
+    window.location.href = "index.html"; // Redirect to home
 }
 
 // Ensure payment page loads cart items
