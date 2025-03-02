@@ -15,10 +15,9 @@
           <html lang='en'>
             <meta charset='UTF-8'>
                 <title>Search Bar Demo</title>
-   
   </head>
   <body>
-    
+    <!-- NavBar -->
   <nav class="navbar">
     <div class="logo">
       <img src="Infinicards Logo.png" alt="Logo" />
@@ -43,11 +42,7 @@
     <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for products...">
   </div>
 
-  
-
-
-
-
+<!-- Products -->
   <div class="container" id="productContainer">
     <div class="product">
       <img src="https://www.doublesleeved.co.uk/cdn/shop/files/Pokemon-TCG-Prismatic-Evolutions-Elite-Trainer-Box_9554f000-597e-411c-af4a-21cb9171a949.webp?v=1730479849" alt="Prismatic Evolution ETB">
@@ -332,8 +327,6 @@
       <button onclick="addToCart('Scarlet & Violet Single Pack', 4.99)">Basket</button>
     </div>
 
-
-      
   <script>
     function filterProducts() {
       const searchInput = document.getElementById('searchInput').value.toLowerCase();
@@ -351,8 +344,6 @@
     }
   </script>
     
-
-
   <script src="bahsket.js"></script>
   </body>
 </html>
