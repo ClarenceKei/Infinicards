@@ -80,7 +80,7 @@ function loadPayment() {
 function completePurchase() {
     alert("Payment Successful! Thank you for your purchase.");
     localStorage.removeItem("cart"); 
-    window.location.href = "index.html";
+    window.location.href = "bahsket.html";
 }
 
 
