@@ -34,13 +34,16 @@
 
     <table class = "center">
         <tr class = "center">
-            <td>
-                <label class = "center">What is your email? (So we can contact you if needed):</label>
-            </td>
+            <form action="/submit" method="POST">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <input type="submit" value="Submit">
+            </form>
+
         </tr>
         <tr class = "center">
             <td>
-                <input class = "center" type="text" id="credit-card" name="credit-card" size="12" maxlength="16" oninput="validateCreditCardInput(event)" placeholder="1234567890123456" />
+                <input class = "center" type="email" id="credit-card" name="credit-card" height="200px"/>
             </td>
         </tr>
         <tr class = "center">
@@ -50,18 +53,15 @@
         </tr>
         <tr class = "center">
             <td>
-                <input class = "center" type="text" id="credit-card" name="credit-card"/>
-            </td>
-            <td>
-                <p>/</p>
-            </td>
-            <td>
-                <input class = "center" type="text" id="credit-card" name="credit-card" size="1"/>
+                <input class = "center" type="text" id="credit-card" name="credit-card" height="200px"/>
             </td>
         </tr>
         <tr class = "center">
             <td>
                 <label class = "center">Any additional comments?</label>
+            </td>
+            <td>
+                <input class = "center" type="text" id="credit-card" name="credit-card" height="200px"/>
             </td>
         </tr>
      
