@@ -87,6 +87,11 @@ function completePurchase() {
     window.location.href = "index.html"; // Redirect to home
 }
 
+function submit() {
+    alert("Message sent! Thank you!");
+    window.location.href = "index.html"; // Redirect to home
+}
+
 // Ensure payment page loads cart items
 if (window.location.pathname.includes("Checkout page.html")) {
     loadPayment();
