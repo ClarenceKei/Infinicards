@@ -90,7 +90,7 @@ function completePurchase() {
 // Ensure payment page loads cart items
 if (window.location.pathname.includes("Checkout page.html")) {
     loadPayment();
-}
+}}
 
 function validateCreditCardInput(event) {
     // Allow only numeric input
