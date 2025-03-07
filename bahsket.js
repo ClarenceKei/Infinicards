@@ -1,6 +1,7 @@
 let cart = [];
 let total = 0;
 
+
 function addToCart(product, price) {
     cart.push({ product, price });
     total = Math.round((total + price) * 100) / 100; // Ensure total is rounded to 2 decimals
