@@ -338,12 +338,12 @@ button {
 }
 
 .messa {
-    width: 100%; /* Takes up the full width of the container */
-    height: 200px; /* Initial height */
-    max-width: 500px; /* Maximum width */
-    max-height: 300px; /* Maximum height */
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    resize: none; /* Allows the user to resize both width and height */
+  width: 100%; /* Takes up the full width of the container */
+  height: 200px; /* Initial height */
+  max-width: 500px; /* Maximum width */
+  max-height: 300px; /* Maximum height */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: both; /* Allows the user to resize both width and height */
 }
