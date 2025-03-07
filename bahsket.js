@@ -85,13 +85,7 @@ function completePurchase() {
     alert("Payment Successful! Thank you for your purchase.");
     localStorage.removeItem("cart"); // Clear cart after purchase
     window.location.href = "index.html"; // Redirect to home
-}
-
-function submit() {
-    alert("Message sent! Thank you!");
-    window.location.href = "index.html"; // Redirect to home
-}
-
+    
 // Ensure payment page loads cart items
 if (window.location.pathname.includes("Checkout page.html")) {
     loadPayment();
@@ -108,7 +102,7 @@ function validateCreditCardInput(event) {
     }
   }
 
-function submits() {
+function submit() {
     alert("Submitted! Thank you!");
     window.location.href = "index.html"; // Redirect to home
 }
