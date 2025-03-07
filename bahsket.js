@@ -102,3 +102,8 @@ function validateCreditCardInput(event) {
       input.value = input.value.slice(0, 16);
     }
   }
+
+function submits() {
+    alert("Submitted! Thank you!");
+    window.location.href = "index.html"; // Redirect to home
+}
